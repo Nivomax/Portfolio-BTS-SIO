@@ -367,12 +367,10 @@
     }
     .side-cta .btn{
       flex: 1 1 0;
-      width: 0;               /* permet à flex de répartir correctement */
+      width: 0;
       justify-content:center;
     }
-    .side-cta .btn-cv{
-      flex: .65 1 0;          /* ✅ CV plus petit (ajuste .5 à .8 si besoin) */
-    }
+    .side-cta .btn-cv{ flex: .65 1 0; }
 
     .contact-cta{
       width:100%;
@@ -417,9 +415,49 @@
     .section{ padding: 3rem 0; }
     .section-head{ margin-bottom:1.4rem; }
 
+    /* ✅ catégories toolbox */
+    .toolbox-categories{
+      display:flex;
+      flex-direction:column;
+      gap: 1.25rem;
+    }
+    .tool-category{
+      padding: .95rem;
+      border-radius: var(--r20);
+      border: 1px solid var(--stroke);
+      background: rgba(255,255,255,.55);
+      box-shadow: 0 10px 26px rgba(16,24,40,.06);
+    }
+    html[data-theme="dark"] .tool-category{
+      background: rgba(18,22,40,.55);
+      box-shadow: 0 10px 26px rgba(0,0,0,.30);
+    }
+    .category-head{
+      display:flex;
+      align-items:baseline;
+      justify-content:space-between;
+      gap: .75rem;
+      margin-bottom: .85rem;
+      padding: 0 .15rem;
+    }
+    .category-title{
+      margin:0;
+      font-size: 1.05rem;
+      font-weight: 850;
+      letter-spacing:-.02em;
+    }
+    .category-subtitle{
+      margin:0;
+      color: var(--muted2);
+      font-size: .92rem;
+      font-weight: 650;
+      letter-spacing:-.01em;
+    }
+
+    /* ✅ 4 cartes par ligne */
     .cards-grid{
       display:grid;
-      grid-template-columns: repeat(5, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap:1rem;
     }
 
@@ -478,6 +516,7 @@
       width:26px; height:26px;
       display:block;
       filter: drop-shadow(0 8px 14px rgba(16,24,40,.10));
+      object-fit: contain;
     }
     .skill-name{
       margin:0;
@@ -562,7 +601,7 @@
       background: rgba(18,22,40,.85);
       box-shadow: 0 10px 26px rgba(0,0,0,.35);
     }
-    .modal-title .modal-icon img{ width:26px; height:26px; display:block; }
+    .modal-title .modal-icon img{ width:26px; height:26px; display:block; object-fit: contain; }
 
     .modal-close{
       border-radius: 12px;
@@ -679,16 +718,20 @@
         align-items:stretch;
       }
 
-      .cards-grid{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      /* ✅ en tablette : 3 colonnes */
+      .cards-grid{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
       .contact-grid{ grid-template-columns: 1fr; }
     }
 
     @media (max-width: 720px){
+      /* ✅ mobile : 2 colonnes */
       .cards-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .home-fab{ top: 14px; left: 14px; }
     }
     @media (max-width: 420px){
+      /* ✅ très petit : 1 colonne */
       .cards-grid{ grid-template-columns: 1fr; }
+      .category-head{ flex-direction:column; align-items:flex-start; }
     }
 
     @media (prefers-reduced-motion: reduce){
@@ -908,188 +951,387 @@
             <div><h2 id="h-competences">ToolBox</h2></div>
           </header>
 
-          <div class="cards-grid">
-            <button class="skill reveal" type="button" data-skill
-              data-name="WordPress"
-              data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg"
-              data-desc="Création / intégration de sites, thèmes, plugins, optimisation."
-              data-tags="CMS, Intégration, SEO, UI">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" />
-                </span>
-                <h3 class="skill-name">WordPress</h3>
-              </div>
-            </button>
+          <div class="toolbox-categories">
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="PrestaShop"
-              data-icon="https://cdn.simpleicons.org/prestashop"
-              data-desc="Mise en place e-commerce, configuration, modules, optimisation."
-              data-tags="E-commerce, CMS, Back-office, Performance">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://cdn.simpleicons.org/prestashop" alt="PrestaShop" />
-                </span>
-                <h3 class="skill-name">PrestaShop</h3>
-              </div>
-            </button>
+            
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="PHP"
-              data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
-              data-desc="Développement back-end, logique métier, CRUD, sécurité."
-              data-tags="Back-end, API, Sécurité, CRUD">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" />
-                </span>
-                <h3 class="skill-name">PHP</h3>
-              </div>
-            </button>
+            <!-- 2) Développement (✅ inclut MySQL + phpMyAdmin, + ajout JS & C) -->
+            <section class="tool-category reveal" aria-label="Développement">
+              <header class="category-head">
+                <p class="category-subtitle">Front, back & data</p>
+              </header>
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="HTML5"
-              data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
-              data-desc="Structure sémantique, accessibilité, bonnes pratiques."
-              data-tags="Front-end, Accessibilité, Sémantique, SEO">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" />
-                </span>
-                <h3 class="skill-name">HTML5</h3>
-              </div>
-            </button>
+              <div class="cards-grid">
+                <button class="skill reveal" type="button" data-skill
+                  data-name="HTML5"
+                  data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"
+                  data-desc="Structure sémantique, accessibilité, bonnes pratiques."
+                  data-tags="Front-end, Accessibilité, Sémantique, SEO">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="HTML5" />
+                    </span>
+                    <h3 class="skill-name">HTML5</h3>
+                  </div>
+                </button>
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="CSS3"
-              data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-              data-desc="Responsive, UI moderne, animations, mise en page."
-              data-tags="Front-end, Responsive, UI, Animations">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS3" />
-                </span>
-                <h3 class="skill-name">CSS3</h3>
-              </div>
-            </button>
+                <button class="skill reveal" type="button" data-skill
+                  data-name="CSS3"
+                  data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                  data-desc="Responsive, UI moderne, animations, mise en page."
+                  data-tags="Front-end, Responsive, UI, Animations">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg" alt="CSS3" />
+                    </span>
+                    <h3 class="skill-name">CSS3</h3>
+                  </div>
+                </button>
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="JavaScript"
-              data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-              data-desc="Interactions, DOM, UX, intégration d'API."
-              data-tags="Front-end, DOM, UX, API">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" />
-                </span>
-                <h3 class="skill-name">JavaScript</h3>
-              </div>
-            </button>
+                <button class="skill reveal" type="button" data-skill
+                  data-name="PHP"
+                  data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg"
+                  data-desc="Développement back-end, logique métier, CRUD, sécurité."
+                  data-tags="Back-end, API, Sécurité, CRUD">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg" alt="PHP" />
+                    </span>
+                    <h3 class="skill-name">PHP</h3>
+                  </div>
+                </button>
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="Python"
-              data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
-              data-desc="Scripts, automatisation, logique, outils."
-              data-tags="Scripting, Automatisation, Outils, Data">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" />
-                </span>
-                <h3 class="skill-name">Python</h3>
-              </div>
-            </button>
+                <button class="skill reveal" type="button" data-skill
+                  data-name="Python"
+                  data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                  data-desc="Scripts, automatisation, logique, outils."
+                  data-tags="Scripting, Automatisation, Outils, Data">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="Python" />
+                    </span>
+                    <h3 class="skill-name">Python</h3>
+                  </div>
+                </button>
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="GitLab"
-              data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
-              data-desc="Gestion de versions, merge requests, CI/CD."
-              data-tags="Git, CI/CD, Collaboration, DevOps">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" />
-                </span>
-                <h3 class="skill-name">GitLab</h3>
-              </div>
-            </button>
+                <!-- ✅ ajout JavaScript -->
+                <button class="skill reveal" type="button" data-skill
+                  data-name="JavaScript"
+                  data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                  data-desc="Interactions, DOM, UX, intégration d'API."
+                  data-tags="Front-end, DOM, UX, API">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://marcuscode.com/static_content/media/00/00/00/94/N1GneFw3_1000.png" alt="JavaScript" />
+                    </span>
+                    <h3 class="skill-name">JavaScript</h3>
+                  </div>
+                </button>
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="Figma"
-              data-icon="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
-              data-desc="Maquettes, design system, prototypage."
-              data-tags="UI/UX, Design, Wireframe, Prototypage">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" />
-                </span>
-                <h3 class="skill-name">Figma</h3>
-              </div>
-            </button>
+                <!-- ✅ ajout C -->
+                <button class="skill reveal" type="button" data-skill
+                  data-name="C"
+                  data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg"
+                  data-desc="Programmation bas niveau : logique, mémoire, structures, performance."
+                  data-tags="Bas niveau, Mémoire, Algo, Performance">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" alt="C" />
+                    </span>
+                    <h3 class="skill-name">C</h3>
+                  </div>
+                </button>
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="Canva"
-              data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
-              data-desc="Création de visuels, supports, présentation."
-              data-tags="Design, Contenu, Présentation, Branding">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" />
-                </span>
-                <h3 class="skill-name">Canva</h3>
-              </div>
-            </button>
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="Bash"
-              data-icon="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg"
-              data-desc="Commandes, scripts, automatisation terminal."
-              data-tags="CLI, Scripting, Admin, Outils">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="Bash" />
-                </span>
-                <h3 class="skill-name">Bash</h3>
-              </div>
-            </button>
+                <!-- ✅ phpMyAdmin déplacé ici -->
+                <button class="skill reveal" type="button" data-skill
+                  data-name="phpMyAdmin"
+                  data-icon="https://cdn.simpleicons.org/phpmyadmin"
+                  data-desc="Administration MySQL/MariaDB : requêtes, exports/imports, utilisateurs."
+                  data-tags="Admin BDD, SQL, MySQL, MariaDB">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.simpleicons.org/phpmyadmin" alt="phpMyAdmin" />
+                    </span>
+                    <h3 class="skill-name">phpMyAdmin</h3>
+                  </div>
+                </button>
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="Linux"
-              data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
-              data-desc="Environnement, outils, systèmes."
-              data-tags="Système, CLI, Serveur, Outils">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" />
-                </span>
-                <h3 class="skill-name">Linux</h3>
+                   <!-- ✅ MySQL déplacé ici -->
+                <button class="skill reveal" type="button" data-skill
+                  data-name="MySQL"
+                  data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
+                  data-desc="Modélisation, requêtes, optimisation."
+                  data-tags="SQL, Base de données, Modélisation, Performance">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" />
+                    </span>
+                    <h3 class="skill-name">MySQL</h3>
+                  </div>
+                </button>
               </div>
-            </button>
+            </section>
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="MySQL"
-              data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg"
-              data-desc="Modélisation, requêtes, optimisation."
-              data-tags="SQL, Base de données, Modélisation, Performance">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg" alt="MySQL" />
-                </span>
-                <h3 class="skill-name">MySQL</h3>
-              </div>
-            </button>
+            <!-- 1) CMS & E-commerce -->
+            <section class="tool-category reveal" aria-label="CMS et E-commerce">
+              <header class="category-head">
+                <p class="category-subtitle">CMS & E-commerce</p>
+              </header>
 
-            <button class="skill reveal" type="button" data-skill
-              data-name="Trello"
-              data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
-              data-desc="Organisation, Kanban, suivi de tâches."
-              data-tags="Organisation, Kanban, Gestion, Projet">
-              <div class="skill-top">
-                <span class="skill-icon" aria-hidden="true">
-                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" alt="Trello" />
-                </span>
-                <h3 class="skill-name">Trello</h3>
+              <div class="cards-grid">
+                <button class="skill reveal" type="button" data-skill
+                  data-name="WordPress"
+                  data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg"
+                  data-desc="Création / intégration de sites, thèmes, plugins, optimisation."
+                  data-tags="CMS, Intégration, SEO, UI">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-plain.svg" alt="WordPress" />
+                    </span>
+                    <h3 class="skill-name">WordPress</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="WooCommerce"
+                  data-icon="https://cdn.simpleicons.org/woocommerce"
+                  data-desc="Boutique e-commerce sous WordPress : produits, paiements, livraison, optimisation."
+                  data-tags="E-commerce, WordPress, Paiement, Catalogue">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://connectif.ai/wp-content/uploads/2023/07/woocommerce.png" alt="WooCommerce" />
+                    </span>
+                    <h3 class="skill-name">WooCommerce</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="PrestaShop"
+                  data-icon="https://cdn.simpleicons.org/prestashop"
+                  data-desc="Mise en place e-commerce, configuration, modules, optimisation."
+                  data-tags="E-commerce, CMS, Back-office, Performance">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.simpleicons.org/prestashop" alt="PrestaShop" />
+                    </span>
+                    <h3 class="skill-name">PrestaShop</h3>
+                  </div>
+                </button>
               </div>
-            </button>
+            </section>
+
+            <!-- 3) Système, Réseau & DevOps -->
+            <section class="tool-category reveal" aria-label="Système, réseau et DevOps">
+              <header class="category-head">
+                <p class="category-subtitle">Infra, hébergement, versioning</p>
+              </header>
+
+              <div class="cards-grid">
+                <button class="skill reveal" type="button" data-skill
+                  data-name="GitLab"
+                  data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg"
+                  data-desc="Gestion de versions, merge requests, CI/CD."
+                  data-tags="Git, CI/CD, Collaboration, DevOps">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original.svg" alt="GitLab" />
+                    </span>
+                    <h3 class="skill-name">GitLab</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="Bash"
+                  data-icon="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg"
+                  data-desc="Commandes, scripts, automatisation terminal."
+                  data-tags="CLI, Scripting, Admin, Outils">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://www.vectorlogo.zone/logos/gnu_bash/gnu_bash-icon.svg" alt="Bash" />
+                    </span>
+                    <h3 class="skill-name">Bash</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="Linux"
+                  data-icon="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg"
+                  data-desc="Environnement, outils, systèmes."
+                  data-tags="Système, CLI, Serveur, Outils">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" />
+                    </span>
+                    <h3 class="skill-name">Linux</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="Debian"
+                  data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg"
+                  data-desc="Administration serveur : paquets, services, sécurité, maintenance."
+                  data-tags="Linux, Serveur, Admin, Sécurité">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/debian/debian-original.svg" alt="Debian" />
+                    </span>
+                    <h3 class="skill-name">Debian</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="Plesk"
+                  data-icon="https://cdn.simpleicons.org/plesk"
+                  data-desc="Panel d’hébergement : domaines, DNS, SSL, déploiement, emails."
+                  data-tags="Hébergement, Panel, SSL, DNS">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.simpleicons.org/plesk" alt="Plesk" />
+                    </span>
+                    <h3 class="skill-name">Plesk</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="VMware"
+                  data-icon="https://cdn.simpleicons.org/vmware"
+                  data-desc="Virtualisation : VM, snapshots, réseaux virtuels, environnements de test."
+                  data-tags="Virtualisation, VM, Snapshots, Lab">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.simpleicons.org/vmware" alt="VMware" />
+                    </span>
+                    <h3 class="skill-name">VMware</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="Cisco Packet Tracer"
+                  data-icon="https://cdn.simpleicons.org/cisco"
+                  data-desc="Simulation réseau : topologies, routage, VLAN, tests et dépannage."
+                  data-tags="Réseau, Simulation, VLAN, Routage">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.simpleicons.org/cisco" alt="Cisco Packet Tracer" />
+                    </span>
+                    <h3 class="skill-name">Cisco Packet Tracer</h3>
+                  </div>
+                </button>
+              </div>
+            </section>
+
+            <!-- 4) IDE -->
+            <section class="tool-category reveal" aria-label="Environnements de développement">
+              <header class="category-head">
+                
+                <p class="category-subtitle">Environnements de développement</p>
+              </header>
+
+              <div class="cards-grid">
+                <button class="skill reveal" type="button" data-skill
+                  data-name="PhpStorm"
+                  data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phpstorm/phpstorm-original.svg"
+                  data-desc="IDE JetBrains : debug, refactor, inspections, productivité."
+                  data-tags="IDE, Debug, Refactor, JetBrains">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/phpstorm/phpstorm-original.svg" alt="PhpStorm" />
+                    </span>
+                    <h3 class="skill-name">PhpStorm</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="CLion"
+                  data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clion/clion-original.svg"
+                  data-desc="IDE C/C++ : CMake, debug, refactor, analyse de code."
+                  data-tags="IDE, C/C++, CMake, Debug">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/clion/clion-original.svg" alt="CLion" />
+                    </span>
+                    <h3 class="skill-name">CLion</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="PyCharm"
+                  data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg"
+                  data-desc="IDE Python : environnements, debug, tests, linting."
+                  data-tags="IDE, Python, Debug, Tests">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" alt="PyCharm" />
+                    </span>
+                    <h3 class="skill-name">PyCharm</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="Eclipse IDE"
+                  data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg"
+                  data-desc="IDE : projets Java (et autres via plugins), build, debug."
+                  data-tags="IDE, Java, Plugins, Debug">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eclipse/eclipse-original.svg" alt="Eclipse IDE" />
+                    </span>
+                    <h3 class="skill-name">Eclipse IDE</h3>
+                  </div>
+                </button>
+              </div>
+            </section>
+
+            <!-- 5) Autres (Canva, Figma, Trello) -->
+            <section class="tool-category reveal" aria-label="Autres outils">
+              <header class="category-head">
+                
+                <p class="category-subtitle">Design & organisation</p>
+              </header>
+
+              <div class="cards-grid">
+                <button class="skill reveal" type="button" data-skill
+                  data-name="Figma"
+                  data-icon="https://www.vectorlogo.zone/logos/figma/figma-icon.svg"
+                  data-desc="Maquettes, design system, prototypage."
+                  data-tags="UI/UX, Design, Wireframe, Prototypage">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://www.vectorlogo.zone/logos/figma/figma-icon.svg" alt="Figma" />
+                    </span>
+                    <h3 class="skill-name">Figma</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="Canva"
+                  data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"
+                  data-desc="Création de visuels, supports, présentation."
+                  data-tags="Design, Contenu, Présentation, Branding">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg" alt="Canva" />
+                    </span>
+                    <h3 class="skill-name">Canva</h3>
+                  </div>
+                </button>
+
+                <button class="skill reveal" type="button" data-skill
+                  data-name="Trello"
+                  data-icon="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg"
+                  data-desc="Organisation, Kanban, suivi de tâches."
+                  data-tags="Organisation, Kanban, Gestion, Projet">
+                  <div class="skill-top">
+                    <span class="skill-icon" aria-hidden="true">
+                      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain.svg" alt="Trello" />
+                    </span>
+                    <h3 class="skill-name">Trello</h3>
+                  </div>
+                </button>
+              </div>
+            </section>
+
           </div>
         </section>
       </main>
@@ -1162,7 +1404,6 @@
     </div>
 
     <aside class="sidebar" aria-label="Bande latérale">
-      <!-- ✅ Top -->
       <div class="side-top">
         <div class="side-menu-top">
           <nav class="nav-links" aria-label="Navigation principale">
@@ -1181,7 +1422,6 @@
         </button>
       </div>
 
-      <!-- ✅ Centre (gif centré verticalement) -->
       <div class="side-center" aria-label="Illustration">
         <a class="side-gif" href="#top" aria-label="Aller en haut">
           <img
@@ -1193,7 +1433,6 @@
         </a>
       </div>
 
-      <!-- ✅ Bas -->
       <div class="side-bottom">
         <div class="side-cta" role="group" aria-label="Liens principaux">
           <a class="btn btn-cv" href="assets/CV.pdf" aria-label="Ouvrir le CV (PDF)" target="_blank" rel="noreferrer">CV</a>
