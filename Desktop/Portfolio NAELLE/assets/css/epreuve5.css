@@ -1,0 +1,339 @@
+/*--------------------------------------------------------------
+GENERAL
+--------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  padding: 25px 0;
+  background: #195c87;
+  min-height: 40px;
+  margin-bottom: 15px;
+}
+
+.header h1 {
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.header ul {
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  margin: 0;
+}
+.header a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.header a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.header a:hover {
+  color: #fff;
+}
+
+.header a:hover:before,
+.header li:hover > a:before,
+.header .active:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.navbar a,
+.navbar a:focus {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+@media (min-width: 320px) and (max-width: 993px) {
+  .header .d-flex {
+    display: inline-block !important;
+  }
+
+  .header ul {
+    display: inline-block;
+  }
+
+  .header ul li {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 994px) and (max-width: 1200px) {
+  .header ul li {
+    padding: 0 20px;
+  }
+}
+/*--------------------------------------------------------------
+# Presentation épreuve E5
+--------------------------------------------------------------*/
+.portfolio-description h2 {
+  color: #195c87;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 32px;
+  margin: 20px 0;
+}
+
+.portfolio-description p {
+  font-size: 19px;
+  text-align: justify;
+}
+
+.portfolio-description li {
+  list-style-type: square;
+  font-size: 19px;
+}
+/*--------------------------------------------------------------
+# Projet épreuve E5
+--------------------------------------------------------------*/
+.section-title {
+  padding-top: 30px;
+}
+
+.portfolio .section-title h2 {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  color: #195c87;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 32px;
+  position: relative;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #195c87;
+  left: 0;
+  bottom: 0;
+}
+
+.portfolio .section-title span {
+  font-style: italic;
+}
+
+.portfolio .d-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.portfolio .d-flex {
+  margin: 25px 0 10px 0;
+  list-style: none;
+  text-align: center;
+  padding: 2px 15px;
+}
+
+.portfolio .d-flex a {
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  color: #fff;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 233px;
+  height: 56px;
+  background: #195c87;
+  text-decoration: none;
+  border: 4px double #fff;
+}
+
+.portfolio .d-flex a:hover {
+  color: #195c87;
+  background: #fff;
+  transition: 1s ease-in-out;
+  border-color: #195c87;
+}
+
+.portfolio-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.portfolio .portfolio-item {
+  margin: 15px 0;
+}
+
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(25, 92, 135, 0.8);
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  top: 30px;
+  bottom: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: #ffffff;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+  opacity: 0;
+  left: 0;
+  right: 0;
+  bottom: 10%;
+  text-align: center;
+  z-index: 3;
+  position: absolute;
+  transition: all ease-in-out 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 2px;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #fff;
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+  top: calc(50% - 48px);
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-links {
+  opacity: 1;
+  bottom: calc(50% - 50px);
+}
+
+/*--------------------------------------------------------------
+  # Portfolio Details
+  --------------------------------------------------------------*/
+
+.portfolio .modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color: var(--bs-modal-color);
+  pointer-events: auto;
+  background-color: var(--bs-modal-bg);
+  background-clip: padding-box;
+  border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
+  border-radius: var(--bs-modal-border-radius);
+  outline: 0;
+}
+
+.modal-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--bs-modal-header-padding);
+  border-bottom: var(--bs-modal-header-border-width) solid
+    var(--bs-modal-header-border-color);
+  border-top-left-radius: var(--bs-modal-inner-border-radius);
+  border-top-right-radius: var(--bs-modal-inner-border-radius);
+}
+
+.modal-title {
+  margin-bottom: 0;
+  line-height: var(--bs-modal-title-line-height);
+}
+
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+.text-blue {
+  background-color: #007bff;
+}
+
+.close-modal-button {
+  border-radius: 5px;
+  color: white;
+}

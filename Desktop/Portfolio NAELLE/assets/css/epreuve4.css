@@ -1,0 +1,196 @@
+/*--------------------------------------------------------------
+GENERAL
+--------------------------------------------------------------*/
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  color: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+#header {
+  padding: 25px 0;
+  background: #195c87;
+  min-height: 40px;
+  margin-bottom: 15px;
+}
+
+.header h1 {
+  font-size: 30px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.header ul {
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  margin: 0;
+}
+.header a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+.header a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.header a:hover {
+  color: #fff;
+}
+
+.header a:hover:before,
+.header li:hover > a:before,
+.header .active:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.navbar a,
+.navbar a:focus {
+  font-size: 15px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+@media (min-width: 320px) and (max-width: 993px) {
+  .header .d-flex {
+    display: inline-block !important;
+  }
+
+  .header ul {
+    display: inline-block;
+  }
+
+  .header ul li {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 994px) and (max-width: 1200px) {
+  .header ul li {
+    padding: 0 20px;
+  }
+}
+/*--------------------------------------------------------------
+# Presentation épreuve E4
+--------------------------------------------------------------*/
+.portfolio-details .portfolio-description h2 {
+ color: #195c87;
+ font-weight: 600;
+ font-style: normal;
+ font-size: 32px;
+ margin: 20px 0;
+}
+
+.portfolio-details .portfolio-description p {
+ font-size: 19px;
+ text-align: justify;
+}
+
+.portfolio-details .portfolio-description li {
+ list-style-type: square;
+ font-size: 19px;
+}
+
+.resume1 p {
+ font-size: 19px;
+ text-align: justify;
+}
+
+.resume2 p {
+ font-size: 19px;
+ text-align: justify;
+}
+
+h4 {
+ font-weight: 600;
+}
+
+/*--------------------------------------------------------------
+# Documents annexes
+--------------------------------------------------------------*/
+.section-title {
+    padding-top: 30px;
+}
+
+.section-title h2 {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    color: #195c87;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 32px;
+    position: relative;
+  }
+
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #195c87;
+    left: 0;
+    bottom: 0;
+  }
+
+.files .container-btn {
+    margin: 0 0 80px 0;
+}
+
+.files a {
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1;
+    color: #fff;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 340px;
+    height: 56px;
+    background: #195c87;
+    text-decoration: none;
+    border: 4px double #fff;
+    list-style-type: none;
+    margin: 0 50px 20px 0;
+  }
+
+.files a:hover {
+    color: #195c87;
+    background: #fff;
+    transition: 1s ease-in-out;
+    border-color: #195c87;
+  }
