@@ -10,10 +10,11 @@
             padding-top: 86px;
         }
 
-        .site-header {
-            background: rgba(0, 0, 0, 0.25);
-            backdrop-filter: blur(18px);
+        section#bloc1{
+            padding: 0 !important;
         }
+
+    
 
         #bloc1 .entreprise-grid {
             grid-template-columns: 1fr;
@@ -21,7 +22,7 @@
         }
 
         #bloc1 .card {
-            width: min(100%, 600px);
+            width: min(100%, 700px);
         }
 
         #bloc1 .card ul {
@@ -48,6 +49,12 @@
 
         h5 {
             margin-bottom: 12px;
+        }
+
+        #bloc1 .section-header .cta-button {
+            display: flex;
+            margin: 1rem auto 0;
+            justify-content: start;
         }
 
         /* Blur effect on non-hovered cards */
@@ -86,11 +93,16 @@
             <div class="section-header">
                 <h3 class="section-label">Bloc 2</h3>
                 <h1>Répondre aux incidents et aux demandes d'assistance et d'évolution</h1>
+                <br><br>
+                <a class="cta-button" href="#C7">C7 - Collecter, suivre et orienter des demandes</a>
+                <a class="cta-button" href="#C8">C8 - Traiter des demandes concernant les services réseau et système, applicatifs</a>
+                <a class="cta-button" href="#C9">C9 - Traiter des demandes concernant les applications</a>
             </div>
+            <br><br><br>
 
             <div class="section-content">
                 <div class="entreprise-grid">
-                    <div class="card">
+                    <div class="card" id="C7">
                         <h5>Compétence 7 - Collecter, suivre et orienter des demandes</h5>
                         <h3>Gestion de tickets via l'outil Gitlab et Giraph pour les clients</h3>
                         <h4>Contexte:</h4>
@@ -101,225 +113,82 @@
                             <li>Réception des tickets via Gitlab pour les demandes de dévellopement.</li>
                             <li>Réception des tickets via Giraph pour les demandes de réseaux.</li>
                         </ul>
-
                         <p class="titre-dem">2. Orientation</p>
                         <ul>
                             <li>Qualification du degré de priorité</li>
                             <li>Attribution aux collaborateurs concernés</li>
                         </ul>
-
                         <p class="titre-dem">3. Documentation et amélioration continue</p>
                         <ul>
                             <li>Rédaction et mise à jour de procédures sur Confluence.</li>
                             <li>Capitalisation des solutions pour améliorer la qualité du support.</li>
                         </ul>
-
                         <h4>Conclusion</h4>
                         <p>La gestion structurée des tickets utilisateurs permet d’assurer un support efficace, un meilleur suivi des demandes et une amélioration continue des services proposés.</p>
                     </div>
 
 
-                    <div class="card">
+
+                    <br>
+                    <div class="card" id="C8">
                         <h5>Compétence 8 - Traiter des demandes concernant les services réseau et système, applicatifs</h5>
-
                         <h3>Intervention chez le client ADETEM pour résoudre des problemes et de réseaux d'imprimante</h3>
-
                         <h4>Contexte:</h4>
-                        <p>Dans le cadre de mon aternance, j'ai été amené à me rendre sur dans les locaux du clients ADETEM. 
-J'ai réorganisé leurs baie, et réaliser une documentation shématique représentant la nouvelle baie avec les connections de chaque cable et outils. J'ai également effectué la configuration d'une imprimante d'entreprise. </p>
+                        <p>Dans le cadre de mon aternance, j'ai été amené à me rendre sur dans les locaux du clients ADETEM. J'ai réorganisé leurs baie, et réaliser une documentation shématique représentant la nouvelle baie avec les connections de chaque cable et outils. J'ai également effectué la configuration d'une imprimante d'entreprise.</p>
                         <h4>Démarche suivi:</h4>
-                        <p class="titre-dem">1. Étude du référentiel ITIL</p>
+                        <p class="titre-dem">1. Problème de connexion</p>
                         <ul>
-                            <li>Analyse des processus</li>
-                            <li>Identification des bonnes pratiques</li>
+                            <li>Analyse de la source du problème: une boucle était présente sur la baie suite à l'intervention d'un technicien Orange.</li>
+                            <li>Réorganisation de la baie.</li>
+                            <li>Rédaction d'un document schématique représentant la baie et ses différentes connexions.</li>
+                            <li>Test de la connexion wifi sans fil et de la connexion filaire ethernet.</li>
                         </ul>
-
-                        <p class="titre-dem">2. Définition des étapes</p>
+                        <p class="titre-dem">2. Configuration de l'imprimante</p>
                         <ul>
-                            <li>Détection</li>
-                            <li>Qualification</li>
-                            <li>Résolution</li>
+                            <li>Analyse du problème: mauvaise configuration IP.</li>
+                            <li>Configuration de la nouvelle adresse IP réseaux sur l'imprimante.</li>
+                            <li>Test d'impression.</li>
                         </ul>
-
-                        <p class="titre-dem">3. Formalisation</p>
-                        <ul>
-                            <li>Rédaction</li>
-                            <li>Définition des rôles</li>
-                        </ul>
-
-                        <p class="titre-dem">4. Validation</p>
-                        <ul>
-                            <li>Présentation</li>
-                            <li>Ajustement</li>
-                        </ul>
-
                         <h4>Conclusion</h4>
-                        <p>Permet d’appliquer un standard reconnu pour améliorer la gestion des incidents.</p>
+                        <p>La prise en charge des demandes liées aux services réseau permet de garantir un environnement de travail fonctionnel chez les clients. Ces missions permettent de se confronter aux réalités du terrain.</p>
                     </div>
 
-                    <div class="card">
-                        <h5>Compétence 3 - Mettre en place et vérifier les niveaux d’habilitation associés à un service</h5>
 
-                        <h3>Revue des habilitations utilisateurs (Conformité Loi DORA)</h3>
-
+                    <br>
+                    <div class="card" id="C9">
+                        <h5>Compétence 9 - Traiter des demandes concernant les applications</h5>
+                        <h3>Résolution de problèmes applicatif des clients</h3>
                         <h4>Contexte:</h4>
-                        <p>Dans le cadre de mon alternance, j’ai participé à une revue des habilitations utilisateurs sur plusieurs applications critiques de l’entreprise (Back-Office, Gitlab, Wiki). Cette mission s’inscrivait dans une démarche de conformité à la loi DORA (Digital Operational Resilience Act), qui impose un contrôle strict des accès aux systèmes d’information critiques afin de limiter les risques opérationnels et de sécurité. L’objectif principal était de vérifier que chaque utilisateur disposait uniquement des droits nécessaires à l’exercice de ses fonctions, conformément au principe du moindre privilège.</p>
-
+                        <p>Dans le cadre de mon alternance, j'ai assuré la maintenance plusieurs sites internets pour des cients externes. L'objectif était d'apporter une réponse rapide et adaptées aux utilisateurs tout en garantissant la traçabilité des demandes et le respect des procédures internes.</p>
                         <h4>Démarche suivi:</h4>
-                        <p class="titre-dem">1. Identification des applications et des profils concernés</p>
-                        <ul>
-                            <li>Recensement des applications critiques soumises aux exigences DORA.</li>
-                            <li>Identification des rôles et profils utilisateurs par application (utilisateur, administrateur, superviseur).</li>
-                        </ul>
-
-                        <p class="titre-dem">2. Analyse des habilitations existantes</p>
-                        <ul>
-                            <li>Extraction des listes d’utilisateurs et de leurs droits depuis chaque application.</li>
-                            <li>Comparaison des habilitations accordées avec les fonctions réelles des utilisateurs.</li>
-                            <li>Détection des anomalies : comptes dormants, droits excessifs, accès non justifiés.</li>
-                        </ul>
-
-                        <p class="titre-dem">3. Vérification du respect des bonnes pratiques de sécurité</p>
-                        <ul>
-                            <li>Application du principe du moindre privilège.</li>
-                            <li>Contrôle de la séparation des rôles (utilisateur / administrateur).</li>
-                            <li>Vérification de la présence de comptes génériques ou partagés.</li>
-                        </ul>
-
-                        <p class="titre-dem">4. Actions correctives et validation</p>
-                        <ul>
-                            <li>Proposition de suppression ou réduction des droits non conformes.</li>
-                            <li>Désactivation des comptes inactifs ou non utilisés.</li>
-                            <li>Validation des modifications avec les responsables applicatifs et métiers.</li>
-                        </ul>
-
-                        <p class="titre-dem">5. Traçabilité et documentation</p>
-                        <ul>
-                            <li>Mise à jour des matrices d’habilitation.</li>
-                            <li>Documentation des contrôles réalisés (preuves, dates, responsables).</li>
-                            <li>Contribution à l’audit de conformité dans le cadre de la réglementation DORA.</li>
-                        </ul>
-
-                        <h4>Conclusion</h4>
-                        <p>Cette revue des habilitations a permis de renforcer la sécurité des applications critiques en garantissant une gestion rigoureuse des accès utilisateurs. La démarche a contribué à réduire les risques liés aux accès excessifs ou non maîtrisés et à améliorer la conformité réglementaire de l’entreprise vis-à-vis de la loi DORA.</p>
-                    </div>
-
-                    <div class="card">
-                        <h5>Compétence 4 - Vérifier les conditions de la continuité d’un service informatique</h5>
-
-                        <h3>Batch de maintenance : Mise à jour de plugins tous les mois</h3>
-
-                        <h4>Contexte:</h4>
-                        <p>Dans mon alternance, j’ai participé à la maintenance mensuelle des sites web afin d’assurer leur bon fonctionnement et leur sécurité.</p>
-
-                        <h4>Démarche suivi:</h4>
-                        <p class="titre-dem">1. Création d'un environnement de test</p>
-                        <ul>
-                            <li>Création d'un sous-domaine</li>
-                            <li>Duplication des fichiers et de la base de données</li>
-                        </ul>
-
-                        <p class="titre-dem">2. Mise à jour progressive</p>
-                        <ul>
-                            <li>Identifications des plugins non à jours</li>
-                            <li>Mise à jour des plugins 1 par 1 en vérifiant que le service fonctionne toujours correctement</li>
-                        </ul>
-
-                        <p class="titre-dem">3. Correction</p>
-                        <ul>
-                            <li>Analyse des erreurs</li>
-                            <li>Correction des erreurs</li>
-                        </ul>
-
-                        <p class="titre-dem">4. Push en production</p>
-                        <ul>
-                            <li>En cas d'aucunes erreurs, les mises à jour sont éffectuée en sur le site en production.</li>
-                            <li>En cas d'erreurs, les fichiers modifiés sont dirrectement remplacer par les fichiers corrigés en environnement de test</li>
-                        </ul>
-
-                        <p class="titre-dem">5. Tenir au courant le clients</p>
-                        <ul>
-                            <li>Rédaction d'un document listant les plugins mis à jours</li>
-                            <li>Description des solutions apporter en cas d'erreurs.</li>
-                            <li>Envoie d'un mail au client.</li>
-                        </ul>
-
-                        <h4>Conclusion</h4>
-                        <p>Cette procédure m'a permis de prendre conscience de maintenir un service à jour afin d'éviter un maximum de cyberattaque et d'assurer la continuité des services pour les utilisateurs.</p>
-                    </div>
-
-                    <div class="card">
-                        <h5>Compétence 5 - Gérer des sauvegardes</h5>
-                        <h3>Réalisation de snapshots des VM des membres de l'équipe et backups des fichiers des sites et BDD.</h3>
-                        <h4>Contexte:</h4>
-                        <p>Dans le cadre du cours de Support et mises à disposition des services informatique du BTS SIO, j'ai réaliser dans le cadre d'un Hackathon, une gourvernance permettant d'assurer une reprise d'activité en cas d'incidents malveillant. Pour celà nous avons effectué des backups des machines virtuelles, des fichiers et de la base de données des différents sites.</p>
-                        <h4>Démarche suivi:</h4>
-                        <p class="titre-dem">1. Machines virtuelles</p>
-                        <ul>
-                            <li>Snapshots effectué à la fin de chaque séance ainsi qu'à chaques avancés majeures</li>
-                        </ul>
-                        <p class="titre-dem">2. Services en lignes</p>
-                        <ul>
-                            <li>Sauvegarde des fichiers</li>
-                            <li>Sauvegarde de la base de données hebdomadaire</li>
-                        </ul>
                         <br>
-                         <hr style="width: 100%; border: 1px solid #fc6c6c8f; margin: 12px 0;">
-                         <br>
-
-                        <h3>Backups des fichiers des sites et des bases de données</h3>
-                        <h4>Contexte</h4>
-                        <p>En entreprise, nous proposons un service d'hébergement (Scarsity). Des sauvegardes sont effectué automatiquement tous les jours. En cas de perte de données, le client peut nous contacter pour récupérer des fichiers disparus ou restaurer une version précédente après une modification destructive.</p>
-                        <h4>Démarche suivi:</h4>
-                        <p class="titre-dem">1. Analyse de la demande utilisateur</p>
                         <ul>
-                            <li>Identification du fichier ou dossier concerné.</li>
-                            <li>Vérification de la date de suppression.</li>
+                            <li>Réception du ticket</li>
+                            <li>Analyse et diagnostic de la demande correction.</li>
+                            <li>Résolution réalisée dans un environnement de test.</li>
+                            <li>Déploiement en production une fois la solution apportée.</li>
                         </ul>
-                        <p class="titre-dem">2. Restauration via l'outils Plesk</p>
-                        <ul>
-                            <li>Restauration d'une version antérieur grâce à l'historique.</li>
-                        </ul>
-                         <p class="titre-dem">3. Vérification de l’intégrité des données</p>
-                        <ul>
-                            <li>Validation du contenu avec l'utilisateur.</li>
-                            <li>Confirmation de la reprise normal de l'activité.</li>
-                        </ul>
-
-                        <h4>Conclusion</h4>
-                        <p>Ces interventions permettent de rétablir rapidement l'accès aux données sans interruption prolongée de l'activités des utilisateurs. Elles démontrent l'importance d'une bonne maîtrise des mécanisme de sauvegarde et de restauration.</p>
-                    </div>
-
-                    <div class="card">
-                        <h5>Compétence 6 - Vérifier le respect des règles d’utilisation des ressources numériques</h5>
-
-                        <h3>Création d'une charte informatique</h3>
-
-                        <h4>Contexte:</h4>
-                        <p>Dans le cadre d'un hackahton, j'ai réalisé une charte informatique pour l'utilisation de notre service.</p>
-
-                        <h4>Démarche suivi:</h4>
-                        <p class="titre-dem">1. Identification des règles</p>
-                        <p class="titre-dem">2. Rédaction</p>
-                        <p class="titre-dem">3. Validation</p>
                         
                         <br>
                         <hr style="width: 100%; border: 1px solid #fc6c6c8f; margin: 12px 0;">
                         <br>
 
-                        <h3>Onboarding et sensibilisation des nouveaux collaborateur</h3>
-
+                        <h3>Evolution des sites internet interne et ceux des clients</h3>
                         <h4>Contexte:</h4>
-                        <p>Dans le cadre de mon alternance, j’ai participé au processus d’onboarding des nouveaux collaborateurs au sein de l’entreprise. Cette activité visait à garantir une prise de poste conforme aux règles d’utilisation des ressources numériques dès l’arrivée de l’utilisateur.</p>
-
+                        <p>Dans le cadre de mon alternance, j'ai assuré l'évolution de plusieurs sites internets internes et pour des cients externes. L'objectif était d'apporter une réponse adaptées aux clients tout en garantissant la traçabilité des demandes et le respect des procédures internes.</p>
                         <h4>Démarche suivi:</h4>
-                        <p class="titre-dem">1. Présentation de l’environnement informatique et des outils mis à disposition (poste de travail, messagerie, outils collaboratifs).</p>
-                        <p class="titre-dem">2. Explication des règles de sécurité : gestion des mots de passe, verrouillage de session.</p>
-                        <p class="titre-dem">3. Rappel des règles d’utilisation du matériel professionnel et des ressources réseau.</p>
-
+                        <br>
+                        <ul>
+                            <li>Réception du ticket ou du cachier des charges.</li>
+                            <li>Analyse et diagnostic de la demande d'évolution.</li>
+                            <li>Evolution réalisée dans un environnement de test.</li>
+                            <li>Déploiement en production une fois la solution apportée.</li>
+                        </ul>
                         <h4>Conclusion</h4>
-                        <p>Cette phase d’onboarding permet de poser un cadre clair dès l’arrivée du collaborateur et de limiter les comportements à risque liés à une mauvaise utilisation des ressources numériques.</p>
+                        <p>La prise en charge des demandes concernant les applications permet de garantir la continuité d'un service en rectifiant rapidement les problêmes, ainsi que de permettre une évolution adaptée aux attentes du clients.</p>
                     </div>
+
+                   
                 </div>
             </div>
         </section>

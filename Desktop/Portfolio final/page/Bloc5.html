@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloc 5</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        body {
+            padding-top: 86px;
+        }
+
+        section#bloc1{
+            padding: 0 !important;
+        }
+
+        #bloc1 .entreprise-grid {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        #bloc1 .card {
+            width: min(100%, 700px);
+        }
+
+        #bloc1 .card ul {
+            margin: 0;
+            padding-left: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        #bloc1 .card li {
+            margin: 0;
+        }
+
+        .titre-dem {
+            font-weight: bold;
+        }
+
+        h3 {
+            margin: 12px 0;
+        }
+
+        h4 {
+            margin-bottom: 0;
+        }
+
+        h5 {
+            margin-bottom: 12px;
+        }
+
+        #bloc1 .section-header .cta-button {
+            display: flex;
+            margin: 1rem auto 0;
+            justify-content: start;
+        }
+
+        /* Blur effect on non-hovered cards */
+        #bloc1 .entreprise-grid:has(.card:hover) .card:not(:hover) {
+            filter: blur(5px);
+            opacity: 0.5;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+
+        #bloc1 .entreprise-grid .card:hover {
+            filter: blur(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body id="top">
+    <header class="site-header">
+        <div class="header-home">
+            <a class="home-btn" href="../index.html#top" aria-label="Accueil">
+                <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M12 3.2 2.5 11.1v1.7h2.3V21h5.6v-5.1h3.2V21h5.9v-8.2h2.0v-1.7L12 3.2Zm0 2.8 7 5.8h-1.4V19h-3.9v-5.1H8.3V19H4.7v-7.2H3.4L12 6Z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="header-menu">
+            <a class="header-link" href="../index.html#formation">FORMATION</a>
+            <a class="header-link" href="../index.html#entreprise">ENTREPRISE</a>
+            <a class="header-link" href="../index.html#projets">PROJETS</a>
+            <a class="header-link" href="../index.html#tableau-de-synthese">TABLEAU DE SYNTHESE</a>
+            <a class="header-link" href="../index.html#veille">VEILLE</a>
+        </div>
+    </header>
+
+    <main id="content-scroll">
+        <section id="bloc1">
+            <div class="section-header">
+                <h3 class="section-label">Bloc 5</h3>
+                <h1>Mettre à disposition des utilisateurs un service informatique</h1>
+                <br><br>
+                <a class="cta-button" href="#C16">C16 - Réaliser les tests d’intégration et d’acceptation d’un service</a>
+                <a class="cta-button" href="#C17">C17 - Déployer un service</a>
+                <a class="cta-button" href="#C18">C18 - Accompagner les utilisateurs dans la mise en place d’un service</a>
+            </div>
+
+            <br><br><br>
+            <div class="section-content">
+                <div class="entreprise-grid">
+                    <div class="card" id="C16">
+                        <h5>Compétence 16 - Réaliser les tests d’intégration et d’acceptation d’un service</h5>
+                        <h3>Création d'un environnement de test pour le site EfreiPoker</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre du développement du site de l’association EfreiPoker, il était nécessaire de mettre en place un environnement de test afin de valider les nouvelles fonctionnalités avant leur mise en production. Cet environnement permettait de reproduire les conditions réelles d’utilisation tout en évitant d’impacter les utilisateurs finaux lors des phases de développement et de correction</p>
+                        
+                        <br>
+                         <hr style="width: 100%; border: 1px solid #fc6c6c8f; margin: 12px 0;">
+                        <br>
+                        
+                        <h3>Création d'un environnement de developpement pour le site du client Ceramat</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de mon stage, un environnement de test était utilisés durant le développement du site du client Ceramat.</p>
+
+                        <br>
+                         <hr style="width: 100%; border: 1px solid #fc6c6c8f; margin: 12px 0;">
+                        <br>
+
+                        <h3>Création d'un environnement de test pour chaques sites</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de mon alternance, des environnements de test étaient systématiquement utilisés durant le développement et la maintenance des sites web. Ces environnements permettaient de tester les évolutions, de les faire valider par les équipes internes puis par les clients, avant leur mise en production afin de garantir la stabilité des services.</p>
+                        <h4>Démarche suivi:</h4>
+                        <p class="titre-dem">1. Mise en place de l’environnement</p>
+                        <ul>
+                            <li>Création d’un sous-domaine de test.</li>
+                            <li>Duplication des fichiers et de la base de données.</li>
+                        </ul>
+                        <p class="titre-dem">2. Réalisation des tests</p>
+                        <ul>
+                            <li>Tests des fonctionnalités développées.</li>
+                            <li>Vérification des parcours utilisateurs.</li>
+                        </ul>
+                        <p class="titre-dem">3. Correction des anomalies</p>
+                        <ul>
+                            <li>Identification des bugs.</li>
+                            <li>Correction et nouveaux tests.</li>
+                        </ul>
+                        <p class="titre-dem">4. Validation</p>
+                        <ul>
+                            <li>Vérification globale du site.</li>
+                            <li>Validation des fonctionnalités attendues.</li>
+                            <li>Mise en production.</li>
+                        </ul>
+                        <h4>Conclusion</h4>
+                        <p>L’utilisation d’environnements de test permet de sécuriser les évolutions et de garantir la qualité des services avant leur mise en production. Elle assure également une validation progressive par les équipes et les clients, limitant ainsi les risques d’erreurs en production et améliorant la satisfaction des utilisateurs.</p>
+                    </div>
+
+
+
+                    <br>
+                    <div class="card" id="C17">
+                        <h5>Compétence 17 - Déployer un service</h5>
+                        <h3>Déploiement de GLPI et de différents site</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de ma formation, j’ai été amené à déployer différents services, notamment une solution GLPI pour la gestion de parc informatique ainsi que des site vitrines. L’objectif était de rendre ces services accessibles aux utilisateurs finaux dans un environnement fonctionnel et sécurisé.</p>
+                        
+                        <br>
+                         <hr style="width: 100%; border: 1px solid #fc6c6c8f; margin: 12px 0;">
+                        <br>
+
+                        <h3>Mise en production du site e-commerce pour le client Ceramat</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de mon stage j’ai participé à la mise en production du site e-commerce du client Ceramat. Après les phases de développement et de test.</p>
+                        
+                        <br>
+                         <hr style="width: 100%; border: 1px solid #fc6c6c8f; margin: 12px 0;">
+                        <br>
+                        
+                        <h3>Mise en production de sites vitrine et e-commerce pour différents clients</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de mon alternance, j’ai participé régulièrement à la mise en production de sites web (vitrine et e-commerce) pour différents clients. Ces déploiements faisaient suite aux phases de développement et de validation en environnement de test.</p>
+                        
+                        <h4>Démarche suivi:</h4>
+                        <p class="titre-dem">1. Préparation du déploiement</p>
+                        <ul>
+                            <li>Validation par l'équipe de développement.</li>
+                            <li>Validation par le client.</li>
+                        </ul>
+                        <p class="titre-dem">2. Transfert des fichiers</p>
+                        <ul>
+                            <li>Envoi des fichiers via FTP.</li>
+                            <li>Vérification de l’intégrité des données.</li>
+                        </ul>
+                        <p class="titre-dem">3. Configuration</p>
+                        <ul>
+                            <li>Import de la base de données.</li>
+                            <li>Mise à jour des paramètres (URL, accès BDD).</li>
+                        </ul>
+                        <p class="titre-dem">4. Tests en production</p>
+                        <ul>
+                            <li>Vérification du bon fonctionnement du site.</li>
+                            <li>Tests des fonctionnalités principales (navigation, commande).</li>
+                        </ul>
+                        <p class="titre-dem">5. Mise en ligne</p>
+                        <ul>
+                            <li>Ouverture au public.</li>
+                            <li>Surveillance des premiers retours.</li>
+                        </ul>
+
+                        <h4>Conclusion</h4>
+                        <p>Le déploiement d’un service constitue une étape clé permettant de rendre une solution accessible aux utilisateurs finaux. Ces expériences m’ont permis de maîtriser les différentes étapes d’une mise en production, de la préparation à la validation finale, tout en garantissant la stabilité et la qualité du service déployé.</p>
+                    </div>
+
+
+
+                    <br>
+                    <div class="card" id="C18">
+                        <h5>Compétence 18 - Accompagner les utilisateurs dans la mise en place d’un service</h5>
+                        <h3>Rédaction de guides simples et vidéos tutoriels pour l'utilisation du backoffice pour les clients</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de mon alternance, après la mise en production des sites web (vitrine ou e-commerce), il était nécessaire d’accompagner les clients dans la prise en main de leur backoffice. Les clients n’ayant pas toujours de compétences techniques, la création de supports pédagogiques (guides et vidéos) permettait de faciliter l’utilisation quotidienne de leur site et de réduire les demandes de support.</p>
+                        <h4>Démarche suivi:</h4>
+                        <br>
+                        <ul>
+                            <li>Identification des besoins utilisateurs.</li>
+                            <li>Rédaction des guides.</li>
+                            <li>Réalisation de vidéos tutoriels.</li>
+                        </ul>
+                        <h4>Conclusion</h4>
+                        <p>La création de guides et de tutoriels permet d’accompagner efficacement les utilisateurs dans la prise en main d’un service. Cette démarche facilite l’autonomie des clients, réduit les erreurs d’utilisation et améliore leur satisfaction. Elle m’a également permis de développer des compétences en pédagogie et en communication technique.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

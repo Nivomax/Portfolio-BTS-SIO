@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloc 3</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        body {
+            padding-top: 86px;
+        }
+
+        section#bloc1{
+            padding: 0 !important;
+        }
+
+
+        #bloc1 .entreprise-grid {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        #bloc1 .card {
+            width: min(100%, 700px);
+        }
+
+        #bloc1 .card ul {
+            margin: 0;
+            padding-left: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        #bloc1 .card li {
+            margin: 0;
+        }
+
+        .titre-dem {
+            font-weight: bold;
+        }
+
+        h3 {
+            margin: 12px 0;
+        }
+
+        h4 {
+            margin-bottom: 0;
+        }
+
+        h5 {
+            margin-bottom: 12px;
+        }
+
+        #bloc1 .section-header .cta-button {
+            display: flex;
+            margin: 1rem auto 0;
+            justify-content: start;
+        }
+
+        /* Blur effect on non-hovered cards */
+        #bloc1 .entreprise-grid:has(.card:hover) .card:not(:hover) {
+            filter: blur(5px);
+            opacity: 0.5;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+
+        #bloc1 .entreprise-grid .card:hover {
+            filter: blur(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body id="top">
+    <header class="site-header">
+        <div class="header-home">
+            <a class="home-btn" href="../index.html#top" aria-label="Accueil">
+                <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M12 3.2 2.5 11.1v1.7h2.3V21h5.6v-5.1h3.2V21h5.9v-8.2h2.0v-1.7L12 3.2Zm0 2.8 7 5.8h-1.4V19h-3.9v-5.1H8.3V19H4.7v-7.2H3.4L12 6Z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="header-menu">
+            <a class="header-link" href="../index.html#formation">FORMATION</a>
+            <a class="header-link" href="../index.html#entreprise">ENTREPRISE</a>
+            <a class="header-link" href="../index.html#projets">PROJETS</a>
+            <a class="header-link" href="../index.html#tableau-de-synthese">TABLEAU DE SYNTHESE</a>
+            <a class="header-link" href="../index.html#veille">VEILLE</a>
+        </div>
+    </header>
+
+    <main id="content-scroll">
+        <section id="bloc1">
+            <div class="section-header">
+                <h3 class="section-label">Bloc 3</h3>
+                <h1>Développer la présence en ligne de l'organisation</h1>
+                <br><br>
+                <a class="cta-button" href="#C10">C10 - Participer à la valorisation de l’image de l’organisation sur les médias numériques</a>
+                <a class="cta-button" href="#C11">C11 - Référencer les services en ligne de l’organisation et mesurer leur visibilité</a>
+                <a class="cta-button" href="#C12">C12 - Participer à l’évolution d’un site Web exploitant les données de l’organisation</a>
+            </div>
+
+            <br><br><br>
+            <div class="section-content">
+                <div class="entreprise-grid">
+
+                    <div class="card" id="C10">
+                        <h5>Compétence 10 - Participer à la valorisation de l’image de l’organisation sur les médias numériques</h5>
+                        <h3>Participation aux développement des sites internet de l'entreprise pour présenter nos prestations</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de mon alternance, j'ai participé au développement des sites internet de SteveGates, Giraph et PowerValet. Ce sont trois services proposés par notre groupe.</p>
+                        <h4>Démarche suivi:</h4>
+                        <br>
+                        <ul>
+                            <li>Réception Cachier des charges.</li>
+                            <li>Développement ou évolution réalisé dans un environnement de test.</li>
+                            <li>Déploiement en production une fois la solution apportée.</li>
+                        </ul>
+
+                        <br>
+                        <hr style="width: 100%; border: 1px solid #fc6c6c8f; margin: 12px 0;">
+                        <br>
+
+                        <h3>Optimisation de la visibilité des services grâce au référencement naturel (SEO)</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de mon alternance, j'ai participé à l'amélioration de la visibilité de nos sites à l'aide du référencement naturel (SEO).</p>
+                        <h4>Démarche suivi:</h4>
+                        <br>
+                        <ul>
+                            <li>Analyse du services proposé.</li>
+                            <li>Installation du plugin Yoast SEO.</li>
+                            <li>Rédaction de Q&A et de blogs.</li>
+                            <li>Rédaction de meta description et de meta title.</li>
+                        </ul>
+
+                        <h4>Conclusion</h4>
+                        <p>Ces activités m’ont permis de contribuer activement à la valorisation de l’image de l’organisation sur les médias numériques. À travers le développement des sites et l’optimisation SEO, j’ai participé à améliorer la présentation des services ainsi que leur visibilité en ligne. Cela a renforcé l’attractivité des offres proposées et permis de mieux répondre aux attentes des utilisateurs et des prospects.</p>
+                    </div>
+
+ 
+
+
+                    <br>
+                    <div class="card" id="C11">
+                        <h5>Compétence 11 - Référencer les services en ligne de l’organisation et mesurer leur visibilité</h5>
+                        <h3>Mise en place du suivi de visibilité via Google Analytics</h3>
+                        <h4>Contexte:</h4>
+                        <p>Afin de mesurer la visibilité et l’utilisation de mon portfolio en ligne, j’ai mis en place un outil de suivi statistique. L’objectif était de comprendre le comportement des visiteurs et d’identifier les axes d’amélioration du site.</p>
+                        <h4>Démarche suivi:</h4>
+                        <br>
+                        <ul>
+                            <li>Intégration de Google Analytics au portfolio.</li>
+                            <li>Étude des interactions utilisateurs afin d’optimiser les contenus.</li>
+                        </ul>
+                        <h4>Conclusion</h4>
+                        <p>Le suivi de visibilité permet d’avoir une vision objective de la fréquentation du site et de son efficacité</p>
+                    </div>
+
+
+                    <br>
+                    <div class="card" id="C12">
+                        <h5>Compétence 12 - Participer à l’évolution d’un site Web exploitant les données de l’organisation</h5>
+                        <h3>Développement d'un site web pour l'association EfreiPoker</h3>
+                        <h4>Contexte:</h4>
+                        <p>Durant ma formation, j'ai eu l'occasion de rejoindre l'association EfreiPoker en tant que responsable informatique. Mon rôle est de développer un site internet pour la visibilité de l'association, mais également un espace administrateur permettant la gestion des membres et des évènements pour le bureau restreint.</p>
+                        <h4>Démarche suivi:</h4>
+                        <br>
+                        <ul>
+                            <li>Analyse du cahier des charges et des besoins.</li>
+                            <li>Création de la base de données et de l'interface administrateur.</li>
+                            <li>Mise en place d’une interface cohérente et professionnelle pour les utilisateurs.</li>
+                            <li>Validation et mise en production.</li>
+                            <li>Evolution et maintenance au fil de l'eau.</li>
+                        </ul>
+                        <h4>Conclusion</h4>
+                        <p>Ce projet me permet de participer concrètement à l’évolution d’un site web en exploitant les données de l’organisation. J’ai développé des compétences en conception de base de données, en développement d’interfaces et en gestion d’un espace administrateur adapté aux besoins des utilisateurs. La mise en production et les évolutions continues permettent également de renforcé ma capacité à maintenir un service fonctionnel et à l’adapter aux besoins réels de l’association.</p>
+                    </div>
+
+
+
+
+                  
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

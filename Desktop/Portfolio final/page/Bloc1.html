@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloc 2</title>
+    <title>Bloc 1</title>
     <link rel="stylesheet" href="../assets/style.css">
     <style>
         body {
             padding-top: 86px;
         }
 
-        .site-header {
-            background: rgba(0, 0, 0, 0.25);
-            backdrop-filter: blur(18px);
+        section#bloc1{
+            padding: 0 !important;
         }
 
         #bloc1 .entreprise-grid {
@@ -21,7 +20,7 @@
         }
 
         #bloc1 .card {
-            width: min(100%, 600px);
+            width: min(100%, 700px);
         }
 
         #bloc1 .card ul {
@@ -31,7 +30,7 @@
         }
 
         #bloc1 .card li {
-            margin: 0;
+            margin: 0 !important;
         }
 
         .titre-dem {
@@ -39,15 +38,21 @@
         }
 
         h3 {
-            margin: 12px 0;
+            margin: 12px 0 !important;
         }
 
         h4 {
-            margin-bottom: 0;
+            margin-bottom: 0 !important;
         }
 
         h5 {
-            margin-bottom: 12px;
+            margin-bottom: 12px !important;
+        }
+
+        #bloc1 .section-header .cta-button {
+            display: flex;
+            margin: 1rem auto 0;
+            justify-content: start;
         }
 
         /* Blur effect on non-hovered cards */
@@ -61,6 +66,8 @@
             filter: blur(0);
             opacity: 1;
         }
+
+
     </style>
 </head>
 <body id="top">
@@ -84,49 +91,89 @@
     <main id="content-scroll">
         <section id="bloc1">
             <div class="section-header">
-                <h3 class="section-label">Bloc 2</h3>
-                <h1>Répondre aux incidents et aux demandes d'assistance et d'évolution</h1>
+                <h3 class="section-label">Bloc 1</h3>
+                <h1>Gérer le patrimoine informatique</h1>
+                <br><br>
+                <a class="cta-button" href="#C1">C1 - Recensement et identification des ressources numériques.</a>
+                <a class="cta-button" href="#C2">C2 - Compétence 2 - Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</a>
+                <a class="cta-button" href="#C3">C3 - Mettre en place et vérifier les niveaux d’habilitation associés à un service</a>
+                <a class="cta-button" href="#C4">C4 - Vérifier les conditions de la continuité d’un service informatique</a>
+                <a class="cta-button" href="#C5">C5 - Gérer des sauvegardes</a>
+                <a class="cta-button" href="#C6">C6 - Vérifier le respect des règles d’utilisation des ressources numériques</a>
             </div>
 
+            <br><br><br>
             <div class="section-content">
                 <div class="entreprise-grid">
-                    <div class="card">
-                        <h5>Compétence 7 - Collecter, suivre et orienter des demandes</h5>
-                        <h3>Gestion de tickets via l'outil Gitlab et Giraph pour les clients</h3>
+                    <div class="card" id="C1">
+                        <h5>Compétence 1 - Recensement et identification des ressources numériques.</h5>
+                        <h3>Recensement d'un parc informatique avec GLPI</h3>
                         <h4>Contexte:</h4>
-                        <p>Dans le cadre de mon alternance, j'ai participé à la gestion des demandes client concernant leurs sites internets, ainsi que leur installation réseaux.</p>
+                        <p>Dans le cadre d'un TP du cours de Support et mise à disposition de services informatiques, j'ai déployé une solution GLPI sur une machine virtuelle Debian afin d’automatiser le recensement des équipements informatiques. L’objectif était de centraliser les informations relatives aux postes, serveurs et logiciels dans une interface unique afin d’améliorer la gestion du parc et d’avoir une meilleure visibilité sur les ressources du système d’information.</p>
                         <h4>Démarche suivi:</h4>
-                        <p class="titre-dem">1. Collecte et analyse des demandes</p>
+                        <p class="titre-dem">1. Prérequis Système</p>
                         <ul>
-                            <li>Réception des tickets via Gitlab pour les demandes de dévellopement.</li>
-                            <li>Réception des tickets via Giraph pour les demandes de réseaux.</li>
+                            <li>Vérification des ressources nécessaires (RAM, stockage, réseau).</li>
+                            <li>Installation d’une machine virtuelle Debian.</li>
                         </ul>
-
-                        <p class="titre-dem">2. Orientation</p>
+                        <p class="titre-dem">2. Installation de l'environnement</p>
                         <ul>
-                            <li>Qualification du degré de priorité</li>
-                            <li>Attribution aux collaborateurs concernés</li>
+                            <li>Installation d’Apache, PHP et MariaDB</li>
+                            <li>Configuration des dépendances nécessaires</li>
                         </ul>
-
-                        <p class="titre-dem">3. Documentation et amélioration continue</p>
+                        <p class="titre-dem">3. Configuration de la Base de Données</p>
                         <ul>
-                            <li>Rédaction et mise à jour de procédures sur Confluence.</li>
-                            <li>Capitalisation des solutions pour améliorer la qualité du support.</li>
+                            <li>Création de la base GLPI.</li>
+                            <li>Attribution des droits.</li>
                         </ul>
-
+                         <p class="titre-dem">4. Installation de GLPI</p>
+                        <ul>
+                            <li>Déploiement de l’application.</li>
+                            <li>Configuration via interface web.</li>
+                        </ul>
+                         <p class="titre-dem">5. Mise en place de l'inventaire automatique</p>
+                        <ul>
+                            <li>Installation de l’agent GLPI.</li>
+                            <li>Vérification des remontées d’informations.</li>
+                        </ul>
                         <h4>Conclusion</h4>
-                        <p>La gestion structurée des tickets utilisateurs permet d’assurer un support efficace, un meilleur suivi des demandes et une amélioration continue des services proposés.</p>
+                        <p>Cette activité m’a permis de comprendre l’importance du recensement des ressources dans un système d’information. Elle m’a également permis d’acquérir des compétences en déploiement d’outils d’inventaire et en exploitation des données collectées.</p>
+                    
+                     <br>
+                         <hr style="width: 100%; border: 1px solid #fc6c6c8f; margin: 12px 0;">
+                         <br>
+
+                         <h3>Recensement des identifiants et mots de passes des différents outils, BDD, accès FTP...</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de mon alternance, l’entreprise gère de nombreux accès pour différents clients. Afin d’éviter les pertes d’information et de sécuriser les accès, un outil interne est utilisé pour centraliser tous les identifiants.</p>
+                        <h4>Démarche suivi:</h4>
+                        <p class="titre-dem">1. Identification des informations</p>
+                        <ul>
+                            <li>Distinction entre accès internes et clients.</li>
+                            <li>Classification selon leur usage.</li>
+                        </ul>
+                        <p class="titre-dem">2. Organisation des accès</p>
+                        <ul>
+                            <li>Création d’espaces par client.</li>
+                            <li>Structuration des données.</li>
+                        </ul>
+                        <p class="titre-dem">3. Enregistrement des données</p>
+                        <ul>
+                            <li>Ajout des identifiants.</li>
+                            <li>Vérification des accès.</li>
+                        </ul>
+                        <h4>Conclusion</h4>
+                        <p>Cette outils permet un accès rapide et clair à tous les outils, sans devoir effectuer de renouvellement de mots de passe. Cette solution m'a été bénéfique puisque aujourd'hui, j'utilise le même outils pour un usage personnel</p>
                     </div>
 
 
-                    <div class="card">
-                        <h5>Compétence 8 - Traiter des demandes concernant les services réseau et système, applicatifs</h5>
 
-                        <h3>Intervention chez le client ADETEM pour résoudre des problemes et de réseaux d'imprimante</h3>
-
+                    <br>
+                    <div class="card" id="C2">
+                        <h5>Compétence 2 - Exploiter des référentiels, normes et standards adoptés par le prestataire informatique</h5>
+                        <h3>Rédaction d'une procédure ITIL de gestion des incidents</h3>
                         <h4>Contexte:</h4>
-                        <p>Dans le cadre de mon aternance, j'ai été amené à me rendre sur dans les locaux du clients ADETEM. 
-J'ai réorganisé leurs baie, et réaliser une documentation shématique représentant la nouvelle baie avec les connections de chaque cable et outils. J'ai également effectué la configuration d'une imprimante d'entreprise. </p>
+                        <p>Dans le cadre d’un hackathon, j’ai participé à la rédaction d’une procédure de gestion des incidents basée sur ITIL afin de structurer le support informatique.</p>
                         <h4>Démarche suivi:</h4>
                         <p class="titre-dem">1. Étude du référentiel ITIL</p>
                         <ul>
@@ -157,7 +204,10 @@ J'ai réorganisé leurs baie, et réaliser une documentation shématique représ
                         <p>Permet d’appliquer un standard reconnu pour améliorer la gestion des incidents.</p>
                     </div>
 
-                    <div class="card">
+
+
+                    <br>
+                    <div class="card" id="C3">
                         <h5>Compétence 3 - Mettre en place et vérifier les niveaux d’habilitation associés à un service</h5>
 
                         <h3>Revue des habilitations utilisateurs (Conformité Loi DORA)</h3>
@@ -204,7 +254,10 @@ J'ai réorganisé leurs baie, et réaliser une documentation shématique représ
                         <p>Cette revue des habilitations a permis de renforcer la sécurité des applications critiques en garantissant une gestion rigoureuse des accès utilisateurs. La démarche a contribué à réduire les risques liés aux accès excessifs ou non maîtrisés et à améliorer la conformité réglementaire de l’entreprise vis-à-vis de la loi DORA.</p>
                     </div>
 
-                    <div class="card">
+
+
+                    <br>
+                    <div class="card" id="C4">
                         <h5>Compétence 4 - Vérifier les conditions de la continuité d’un service informatique</h5>
 
                         <h3>Batch de maintenance : Mise à jour de plugins tous les mois</h3>
@@ -248,7 +301,10 @@ J'ai réorganisé leurs baie, et réaliser une documentation shématique représ
                         <p>Cette procédure m'a permis de prendre conscience de maintenir un service à jour afin d'éviter un maximum de cyberattaque et d'assurer la continuité des services pour les utilisateurs.</p>
                     </div>
 
-                    <div class="card">
+
+
+                    <br>
+                    <div class="card" id="C5">
                         <h5>Compétence 5 - Gérer des sauvegardes</h5>
                         <h3>Réalisation de snapshots des VM des membres de l'équipe et backups des fichiers des sites et BDD.</h3>
                         <h4>Contexte:</h4>
@@ -290,7 +346,10 @@ J'ai réorganisé leurs baie, et réaliser une documentation shématique représ
                         <p>Ces interventions permettent de rétablir rapidement l'accès aux données sans interruption prolongée de l'activités des utilisateurs. Elles démontrent l'importance d'une bonne maîtrise des mécanisme de sauvegarde et de restauration.</p>
                     </div>
 
-                    <div class="card">
+
+
+                    <br>
+                    <div class="card" id="C6">
                         <h5>Compétence 6 - Vérifier le respect des règles d’utilisation des ressources numériques</h5>
 
                         <h3>Création d'une charte informatique</h3>

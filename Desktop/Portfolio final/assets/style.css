@@ -126,7 +126,7 @@ ul {
   position: relative;
   z-index: 10;
   color: #fff;
-  padding: 100px 40px;
+  padding: 0 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -209,30 +209,18 @@ a.header-link{
 }
 
 .home-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.25);
+  display: inline-block;
   color: rgb(215, 215, 215);
-  box-shadow: none;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 0;
   margin: 0;
 }
 
 .home-btn:hover {
-  transform: scale(1.05);
-  border-color: rgba(255, 255, 255, 0.55);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.18);
-}
-
-.home-icon {
-  width: 20px;
-  height: 20px;
-  display: block;
+  color: #ff8282;
 }
 
 /* ------------------------- CSS btn---------------------------  */
@@ -434,6 +422,11 @@ button:hover:before {
   gap: 0.5rem;
 }
 
+
+section#accueil{
+  padding: 0 !important;
+}
+
 /* Reset paragraph spacing only inside formation cards */
 #formation .card p {
   margin: 15px 0 0;
@@ -499,20 +492,20 @@ button:hover:before {
    background-color: #ff828238; 
   }
 
-.entreprise-grid > .card:nth-child(2),
-.entreprise-grid > .card:nth-child(3) {
+#entreprise .entreprise-grid > .card:nth-child(2),
+#entreprise .entreprise-grid > .card:nth-child(3) {
   gap: 0.85rem;
 }
 
-.entreprise-grid > .card:nth-child(2) h4,
-.entreprise-grid > .card:nth-child(2) p,
-.entreprise-grid > .card:nth-child(3) h4,
-.entreprise-grid > .card:nth-child(3) p {
+#entreprise .entreprise-grid > .card:nth-child(2) h4,
+#entreprise .entreprise-grid > .card:nth-child(2) p,
+#entreprise .entreprise-grid > .card:nth-child(3) h4,
+#entreprise .entreprise-grid > .card:nth-child(3) p {
   margin: 0;
 }
 
-.entreprise-grid > .card:nth-child(2) ul,
-.entreprise-grid > .card:nth-child(3) ul {
+#entreprise .entreprise-grid > .card:nth-child(2) ul,
+#entreprise .entreprise-grid > .card:nth-child(3) ul {
   margin: 0;
 }
 
@@ -613,9 +606,6 @@ button:hover:before {
   }
 }
 
-section#accueil {
-  gap:15px;
-}
 
 .card {
   text-align: start;

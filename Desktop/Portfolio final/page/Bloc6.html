@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloc 6</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        body {
+            padding-top: 86px;
+        }
+
+        section#bloc1{
+            padding: 0 !important;
+        }
+
+        #bloc1 .entreprise-grid {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        #bloc1 .card {
+            width: min(100%, 700px);
+        }
+
+        #bloc1 .card ul {
+            margin: 0;
+            padding-left: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        #bloc1 .card li {
+            margin: 0;
+        }
+
+        .titre-dem {
+            font-weight: bold;
+        }
+
+        h3 {
+            margin: 12px 0;
+        }
+
+        h4 {
+            margin-bottom: 0;
+        }
+
+        h5 {
+            margin-bottom: 12px;
+        }
+
+        #bloc1 .section-header .cta-button {
+            display: flex;
+            margin: 1rem auto 0;
+            justify-content: start;
+        }
+
+        /* Blur effect on non-hovered cards */
+        #bloc1 .entreprise-grid:has(.card:hover) .card:not(:hover) {
+            filter: blur(5px);
+            opacity: 0.5;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+
+        #bloc1 .entreprise-grid .card:hover {
+            filter: blur(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body id="top">
+    <header class="site-header">
+        <div class="header-home">
+            <a class="home-btn" href="../index.html#top" aria-label="Accueil">
+                <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M12 3.2 2.5 11.1v1.7h2.3V21h5.6v-5.1h3.2V21h5.9v-8.2h2.0v-1.7L12 3.2Zm0 2.8 7 5.8h-1.4V19h-3.9v-5.1H8.3V19H4.7v-7.2H3.4L12 6Z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="header-menu">
+            <a class="header-link" href="../index.html#formation">FORMATION</a>
+            <a class="header-link" href="../index.html#entreprise">ENTREPRISE</a>
+            <a class="header-link" href="../index.html#projets">PROJETS</a>
+            <a class="header-link" href="../index.html#tableau-de-synthese">TABLEAU DE SYNTHESE</a>
+            <a class="header-link" href="../index.html#veille">VEILLE</a>
+        </div>
+    </header>
+
+    <main id="content-scroll">
+        <section id="bloc1">
+            <div class="section-header">
+                <h3 class="section-label">Bloc 6</h3>
+                <h1>Organiser son développement professionnel</h1>
+                <br><br>
+                <a class="cta-button" href="#C19">C19 - Mettre en place son environnement d’apprentissage personnel</a>
+                <a class="cta-button" href="#C20">C20 - Mettre en œuvre des outils et stratégies de veille informationnelle</a>
+                <a class="cta-button" href="#C21">C21 - Identifier les besoins en compétences et en formation</a>
+                <a class="cta-button" href="#C22">C22 - Planifier son développement professionnel</a>
+            </div>
+
+            <br><br><br>
+            <div class="section-content">
+                <div class="entreprise-grid">
+                    <div class="card" id="C19">
+                        <h5>Compétence 19 - Mettre en place son environnement d’apprentissage personnel</h5>
+                        <h3>Création d'un espace de travail numérique : OneNote + anki</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de ma formation en BTS SIO, j’ai mis en place un environnement d’apprentissage personnel afin d’améliorer mon organisation et mon efficacité dans la révision des cours et la préparation des épreuves. L’objectif était de structurer mes connaissances, centraliser mes ressources et optimiser la mémorisation des notions techniques et théoriques.</p>
+                        <h4>Démarche suivi:</h4>
+                        <br>
+                        <ul>
+                            <li>Utilisation de OneNote pour l’organisation des cours et projets.</li>
+                            <li>Utilisation d’Anki pour la mémorisation active (flashcards).</li>
+                            <li>Création de sections par matière et par compétence.</li>
+                            <li>Mise à jour régulière des contenus.</li>
+                        </ul>
+                        <h4>Conclusion</h4>
+                        <p>La mise en place d’un environnement d’apprentissage personnel m’a permis de mieux structurer mon travail et d’améliorer mon efficacité dans l’acquisition des connaissances. L’utilisation combinée de OneNote et Anki favorise une meilleure organisation ainsi qu’une mémorisation plus durable des notions importantes.</p>
+                    </div>
+
+
+
+                    <br>
+                    <div class="card" id="C20">
+                        <h5>Compétence 20 - Mettre en œuvre des outils et stratégies de veille informationnelle</h5>
+                        <h3>Mise en place d’une veille technologique</h3>
+                        <h4>Contexte:</h4>
+                        <p>Afin de rester informée des évolutions du secteur informatique, j’ai mis en place une veille technologique régulière, principalement orientée vers la cybersécurité.</p>
+                        <h4>Démarche suivi:</h4>
+                        <br>
+                        <ul>
+                            <li>Consultation de sources spécialisées en cybersécurité.</li>
+                            <li>Suivi de l’actualité des vulnérabilités et incidents de sécurité.</li>
+                        </ul>
+                        <h4>Conclusion</h4>
+                        <p>La veille technologique me permet de maintenir mes connaissances à jour, d’anticiper les évolutions du domaine informatique et de renforcer ma pratique professionnelle.</p>
+                    </div>
+
+
+
+                    <br>
+                    <div class="card" id="C21">
+                        <h5>Compétence 21 - Gérer son identité professionnelle</h5>
+                        <h3>Conception du portfolio</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de ma formation en BTS SIO, j’ai conçu un portfolio numérique afin de centraliser et valoriser mes réalisations professionnelles et pédagogiques.</p>
+                        <h4>Démarche suivi:</h4>
+                        <br>
+                        <ul>
+                            <li>Structuration du portfolio par blocs de compétences du référentiel BTS SIO.</li>
+                            <li>Sélection et rédaction des situations professionnelles significatives.</li>
+                            <li>Mise en forme claire et cohérente pour faciliter la lecture et la compréhension.</li>
+                            <li>Mises à jour régulières en fonction de l’évolution de mes compétences.</li>
+                        </ul>
+
+                        <br>
+                         <hr style="width: 100%; border: 1px solid #fc6c6c8f; margin: 12px 0;">
+                        <br>
+
+                        <h3>Création et gestion de mes profils professionnels LinkedIn et GitHub</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de mon insertion professionnelle, j’ai créé et structuré mes profils LinkedIn et GitHub afin de développer mon identité professionnelle numérique.</p>
+                        <h4>Démarche suivi:</h4>
+                        <br>
+                        <ul>
+                            <li>Création et complétion de mon profil LinkedIn.</li>
+                            <li>Mise en avant de mes expériences et compétences clés.</li>
+                            <li>Publication de projets et de codes sources sur GitHub.</li>
+                        </ul>
+                        <h4>Conclusion</h4>
+                        <p>La création d'un portfolio ainsi que la gestion de mes profils professionnels contribue à renforcer ma visibilité, ma crédibilité et mon positionnement dans le secteur informatique.</p>
+                    </div>
+
+
+
+                    <br>
+                    <div class="card" id="C22">
+                        <h5>Compétence 22 - Développer son projet professionnel</h5>
+                        <h3>Fixation d'objectifs (projet) et accompliseement de certifications pour renforcer et découvrir de nouvelles compténces</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de mon parcours en BTS SIO, j’ai travaillé activement sur la définition et l’évolution de mon projet professionnel dans le domaine du numérique.</p>
+                        <h4>Démarche suivi:</h4>
+                        <br>
+                        <ul>
+                            <li>Identification des métiers du numérique qui m’intéressent.</li>
+                            <li>Analyse des compétences requises pour ces métiers.</li>
+                            <li>Réalisation de projets.</li>
+                            <li>Obtentions de certification dans le domaine visé.</li>
+                            <li>Échanges avec des professionnels et des étudiants d’autres filières.</li>
+                            <li>Veille sur les opportunités d’évolution et de poursuite d’études.</li>
+                        </ul>
+                       
+                        <h4>Conclusion</h4>
+                        <p>Ces travaux m’ont permis de clarifier mes objectifs professionnels et de construire un projet cohérent en lien avec mes compétences et mes aspirations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

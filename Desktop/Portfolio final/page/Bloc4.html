@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloc 4</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <style>
+        body {
+            padding-top: 86px;
+        }
+
+        section#bloc1{
+            padding: 0 !important;
+        }
+
+        #bloc1 .entreprise-grid {
+            grid-template-columns: 1fr;
+            justify-items: center;
+        }
+
+        #bloc1 .card {
+            width: min(100%, 700px);
+        }
+
+        #bloc1 .card ul {
+            margin: 0;
+            padding-left: 1.4rem;
+            margin-bottom: 1rem;
+        }
+
+        #bloc1 .card li {
+            margin: 0;
+        }
+
+        .titre-dem {
+            font-weight: bold;
+        }
+
+        h3 {
+            margin: 12px 0;
+        }
+
+        h4 {
+            margin-bottom: 0;
+        }
+
+        h5 {
+            margin-bottom: 12px;
+        }
+
+        #bloc1 .section-header .cta-button {
+            display: flex;
+            margin: 1rem auto 0;
+            justify-content: start;
+        }
+
+        /* Blur effect on non-hovered cards */
+        #bloc1 .entreprise-grid:has(.card:hover) .card:not(:hover) {
+            filter: blur(5px);
+            opacity: 0.5;
+            transition: filter 0.3s ease, opacity 0.3s ease;
+        }
+
+        #bloc1 .entreprise-grid .card:hover {
+            filter: blur(0);
+            opacity: 1;
+        }
+    </style>
+</head>
+<body id="top">
+    <header class="site-header">
+        <div class="header-home">
+            <a class="home-btn" href="../index.html#top" aria-label="Accueil">
+                <svg class="home-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                    <path fill="currentColor" d="M12 3.2 2.5 11.1v1.7h2.3V21h5.6v-5.1h3.2V21h5.9v-8.2h2.0v-1.7L12 3.2Zm0 2.8 7 5.8h-1.4V19h-3.9v-5.1H8.3V19H4.7v-7.2H3.4L12 6Z"/>
+                </svg>
+            </a>
+        </div>
+        <div class="header-menu">
+            <a class="header-link" href="../index.html#formation">FORMATION</a>
+            <a class="header-link" href="../index.html#entreprise">ENTREPRISE</a>
+            <a class="header-link" href="../index.html#projets">PROJETS</a>
+            <a class="header-link" href="../index.html#tableau-de-synthese">TABLEAU DE SYNTHESE</a>
+            <a class="header-link" href="../index.html#veille">VEILLE</a>
+        </div>
+    </header>
+
+    <main id="content-scroll">
+        <section id="bloc1">
+            <div class="section-header">
+                <h3 class="section-label">Bloc 4</h3>
+                <h1>Travailler en mode projet</h1>
+                <br><br>
+                <a class="cta-button" href="#C13">C13 - Analyser les objectifs et les modalités d’organisation d’un projet</a>
+                <a class="cta-button" href="#C14">C14 - Planifier les activités</a>
+                <a class="cta-button" href="#C15">C15 - Evaluer les indicateurs de suivi d'un projet et analyser les écarts</a>
+            </div>
+
+            <br><br><br>
+            <div class="section-content">
+                <div class="entreprise-grid">
+                    <div class="card" id="C13">
+                        <h5>Compétence 13 - Analyser les objectifs et les modalités d’organisation d’un projet</h5>
+                        <h3>Réalisation d'un cahier des charges pour le site de l'association EfreiPoker</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de mon rôle de responsable informatique au sein de l’association EfreiPoker, j’ai été chargé de concevoir un site internet destiné à améliorer la visibilité de l’association et à faciliter la gestion interne des membres et des événements. Avant de débuter le développement, il était nécessaire de formaliser précisément les besoins afin de cadrer le projet, définir les objectifs et anticiper les contraintes techniques et organisationnelles. La réalisation d’un cahier des charges a donc permis de structurer le projet et d’aligner les attentes des différents acteurs (bureau, utilisateurs, développeur).</p>
+                        <h4>Démarche suivi:</h4>
+                        <p class="titre-dem">1. Recueil des besoins</p>
+                        <ul>
+                            <li>Échanges avec les membres du bureau pour identifier les attentes (gestion des membres, organisation des tournois, visibilité externe).</li>
+                            <li>Identification des utilisateurs cibles (administrateurs, membres, visiteurs).</li>
+                        </ul>
+                        <p class="titre-dem">2. Analyse des objectifs</p>
+                        <ul>
+                            <li>Définition des objectifs principaux du site (communication, gestion interne, automatisation).</li>
+                            <li>Priorisation des fonctionnalités (inscription, gestion des événements, tableau de bord admin).</li>
+                        </ul>
+                        <p class="titre-dem">3. Rédaction du cahier des charges</p>
+                        <ul>
+                            <li>Description des fonctionnalités attendues.</li>
+                            <li>Définition des parcours utilisateurs.</li>
+                            <li>Structuration du document (besoin, solution, contraintes, planning).</li>
+                        </ul>
+                        <p class="titre-dem">4. Validation</p>
+                        <ul>
+                            <li>Présentation du cahier des charges au bureau.</li>
+                            <li>Ajustements en fonction des retours.</li>
+                        </ul>
+                        <h4>Conclusion</h4>
+                        <p>La réalisation de ce cahier des charges m’a permis d’analyser en profondeur les objectifs du projet et d’en structurer l’organisation. Cette étape a été essentielle pour clarifier les besoins, anticiper les contraintes et garantir une base solide pour le développement du site. Elle m’a également permis de développer mes compétences en gestion de projet et en communication avec les parties prenantes.</p>
+                    </div>
+
+
+
+                    <br>
+                    <div class="card" id="C14">
+                        <h5>Compétence 14 - Planifier les activités</h5>
+                        <h3>Utilisation d'un Trello pour l'équipe de développeur</h3>
+                        <h4>Contexte:</h4>
+                        <p>En entreprise et à l'école, nous utilisons l’outil Trello pour organiser nos projets de développement web et assurer une bonne répartition des tâches au sein de l’équipe. Cet outil permet de visualiser l’avancement des projets, de prioriser les demandes et de structurer le travail collaboratif. Il est particulièrement utile dans un environnement où plusieurs projets sont gérés en parallèle, avec des délais et des priorités différents.</p>                        
+                        <h4>Démarche suivi:</h4>
+                        <p class="titre-dem">1. Création et structuration du tableau</p>
+                        <ul>
+                            <li>Mise en place des colonnes (Backlog / À faire / En cours / Terminé)</li>
+                            <li>Organisation des tâches par projet ou client</li>
+                        </ul>
+                        <p class="titre-dem">2. Création des tâches</p>
+                        <ul>
+                            <li>Décomposition des projets en tâches unitaires.</li>
+                            <li>Description précise des actions à réaliser.</li>
+                            <li>Ajout de pièces jointes ou de liens utiles.</li>
+                        </ul>
+                        <p class="titre-dem">3. Priorisation et planification</p>
+                        <ul>
+                            <li>Attribution d’un niveau de priorité.</li>
+                            <li>Définition des échéances.</li>
+                            <li>Organisation des tâches selon les urgences.</li>
+                        </ul>
+                    
+                        <h4>Conclusion</h4>
+                        <p>L’utilisation de Trello m’a permis de mieux planifier les activités et d’avoir une vision claire de l’avancement des projets. Cet outil facilite la coordination entre les membres de l’équipe, améliore la gestion des priorités et contribue à respecter les délais fixés.</p>
+                    </div>
+
+
+
+                    <br>
+                    <div class="card" id="C15">
+                        <h5>Compétence 15 - Évaluer les indicateurs de suivi d’un projet et analyser les écarts</h5>
+                        <h3>Evaluation des KPI des tâches réalisés par les membres de l'équipe de développement</h3>
+                        <h4>Contexte:</h4>
+                        <p>Dans le cadre de mon alternance, j’ai participé au suivi de l’avancement des projets de développement web au sein de l’équipe. Afin d’assurer le respect des délais et d’optimiser l’organisation du travail, des indicateurs de performance (KPI) étaient utilisés pour mesurer l’efficacité des tâches réalisées. L’objectif était d’identifier les écarts entre le travail prévu et le travail réellement effectué afin d’améliorer la gestion des projets et la productivité de l’équipe.</p>
+                        <h4>Démarche suivi:</h4>
+                        <p class="titre-dem">1. Définition des indicateurs</p>
+                        <ul>
+                            <li>Identification des KPI pertinents (temps estimé vs temps réel, nombre de tâches terminées, respect des délais).</li>
+                            <li>Mise en place d’indicateurs simples et exploitables.</li>
+                        </ul>
+                        <p class="titre-dem">2. Collecte des données</p>
+                        <ul>
+                            <li>Récupération des informations depuis les outils de gestion (Trello, Gitlab).</li>
+                            <li>Suivi du temps passé sur les tâches.</li>
+                            <li>Analyse des tickets clôturés.</li>
+                        </ul>
+                        <p class="titre-dem">3. Analyse des écarts</p>
+                        <ul>
+                            <li>Comparaison entre les estimations initiales et le temps réellement passé.</li>
+                            <li>Identification des retards ou des tâches plus complexes que prévu.</li>
+                            <li>Mise en évidence des points de blocage.</li>
+                        </ul>
+                        <p class="titre-dem">4. Interprétation des résultats</p>
+                        <ul>
+                            <li>Analyse des causes des écarts (mauvaise estimation, imprévus techniques, dépendances).</li>
+                            <li>Évaluation de l’impact sur le projet global.</li>
+                        </ul>
+                        <p class="titre-dem">5. Proposition d’amélioration</p>
+                        <ul>
+                            <li>Ajustement des estimations futures.</li>
+                            <li>Amélioration de l’organisation des tâches.</li>
+                            <li>Optimisation de la communication au sein de l’équipe.</li>
+                        </ul>
+                        <h4>Conclusion</h4>
+                        <p>Cette activité m’a permis de comprendre l’importance du suivi des indicateurs dans la gestion de projet. L’analyse des écarts entre les prévisions et les réalisations permet d’identifier les axes d’amélioration, d’optimiser la planification et d’augmenter l’efficacité globale de l’équipe de développement.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
